@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Shoes Redesign</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue Thin", Arial, sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .menu-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 2px;
+            background-color: black;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links div {
+            text-transform: uppercase;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .category img {
+            width: 200px;
+            height: auto;
+            background: none;
+            mix-blend-mode: multiply;
+        }
+        .category div {
+            font-size: 14px;
+            font-weight: lighter;
+        }
+        /* Shoe options row */
+        .shoe-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .shoe-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .shoe {
+            text-align: center;
+            max-width: 250px;
+        }
+        .shoe img {
+            width: 100%;
+            height: auto;
+        }
+        .shoe div {
+            font-size: 12px; /* Reduced font size */
+            font-weight: lighter;
+            margin-top: 10px;
+        }
+        /* Footer Styles */
+    .footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: black;
+    }
+
+    .footer-menu-item {
+        text-align: center;
+        padding: 5px
+    }
+
+    .footer-menu-item img {
+        width: 180px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .footer-logo {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .footer-logo img {
+        width: 100%; /* Makes the image responsive */
+        max-width: 500px; /* Prevents it from getting too large */
+        height: auto; /* Maintains aspect ratio */
+    }
+        @media (max-width: 768px) {
+            .logo img {
+                width: 120px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: flex;
+            }
+            .categories {
+                justify-content: flex-start;
+                gap: 20px;
+            }
+            .category img {
+                width: 80px;
+            }
+            .nav-links.open {
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            .nav-links.open div {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .shoe-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            .shoe-row {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+            .shoe {
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-logo">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="logo">
+                <img src="Zara-logо.png" alt="Zara Logo">
+            </div>
+        </div>
+        <div class="nav-links">
+            <div>Search</div>
+            <div>Log In</div>
+            <div>Help</div>
+            <div>Shopping Bag [0]</div>
+        </div>
+    </header>
+    
+    <section class="categories">
+        <div class="category">
+            <img src="HeelsMenu.png" alt="High Heels">
+            <div>HIGH HEELS</div>
+        </div>
+        <div class="category">
+            <img src="FlatsMenu.png" alt="Flats">
+            <div>FLATS</div>
+        </div>
+        <div class="category">
+            <img src="SandalsMenu.png" alt="Sandals">
+            <div>SANDALS</div>
+        </div>
+        <div class="category">
+            <img src="BootsMenu.png" alt="Boots">
+            <div>BOOTS | ANKLE BOOTS</div>
+        </div>
+        <div class="category">
+            <img src="SneakerMenu.png" alt="Sneakers">
+            <div>SNEAKERS</div>
+        </div>
+    </section>
+
+    <section class="shoe-options">
+        <div class="shoe-row">
+            <div class="shoe"><img src="web1.jpg" alt="Slingback Buckle Shoes"><div>SLINGBACK BUCKLE SHOES</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web2.jpg" alt="Contrast Sneakers"><div>CONTRAST SNEAKERS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web3.jpg" alt="Buckle Mary Janes"><div>BUCKLE MARY JANES</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web4.jpg" alt="Slingback Faux Patent Kitten Heels"><div>SLINGBACK FAUX PATENT KITTEN HEELS</div><div>$49.90</div></div>
+        </div>
+        <div class="shoe-row">
+            <div class="shoe"><img src="web5.jpg" alt="Flat Buckled Sandals"><div>FLAT BUCKLED SANDALS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web6.jpg" alt="Satin Effect Ruched Ballet Flats"><div>SATIN EFFECT RUCHED BALLET FLATS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web7.jpg" alt="Jelly Ballet Flats"><div>JELLY BALLET FLATS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web8.jpg" alt="High-Heeled Denim Sandals"><div>HIGH-HEELED DENIM SANDALS</div><div>$49.90</div></div>
+        </div>
+        <div class="shoe-row">
+            <div class="shoe"><img src="web9.jpg" alt="METALLIC EFFECT SLING BACK KITTEN HEELS"><div>METALLIC EFFECT SLING BACK KITTEN HEELS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web10.jpg" alt="PATENT SLINGBACK PUMPS"><div>PATENT SLINGBACK PUMPS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web11.jpg" alt="FAUX PEARL HEELED SANDALS"><div>FAUX PEARL HEELED SANDALS</div><div>$49.90</div></div>
+            <div class="shoe"><img src="web12.jpg" alt="COLOR COMBINATION SNEAKERS"><div>COLOR COMBINATION SNEAKERS</div><div>$49.90</div></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-menu">
+        <div class="footer-menu-item">
+            <img src="ContactMe.png" alt="Contact Icon">
+        </div>
+        <div class="footer-menu-item">
+            <img src="OrderStatus.png" alt="Order Status Icon">
+        </div>
+        <div class="footer-menu-item">
+            <img src="ShippingOrder.png" alt="Shipping Order Icon">
+        </div>
+        <div class="footer-menu-item">
+            <img src="StorePickup.png" alt="Store Pickup Icon">
+        </div>
+        <div class="footer-menu-item">
+            <img src="Returns.png" alt="Returns Icon">
+        </div>
+        <div class="footer-menu-item">
+            <img src="Help.png" alt="Help Icon">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="whiteZara-logо.png" alt="Zara White Logo">
+        </div>
+    </div>
+</footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
