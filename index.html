@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hand-in</title>
+    <title>Zara Shoes Redesign</title>
     <style>
+        .credit {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: grey;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        }
+
         body {
             font-family: "Helvetica Neue Thin", Arial, sans-serif;
             margin: 0;
@@ -89,7 +98,7 @@
         .design-inspiration {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: top;
             flex-wrap: wrap;
             gap: 10px;
         }
@@ -98,6 +107,23 @@
             max-width: 32%; /* Ensure images take equal width in a row */
             height: auto;
         }
+        .spacer {
+        height: 50px; /* Adjust the height as needed */
+        }
+
+        .ipad-design {
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ipad-design img {
+            max-width: auto; /* Ensure images take equal width in a row */
+            height: auto;
+        }
+
 
 
         @media (max-width: 600px) {
@@ -118,12 +144,17 @@
 </head>
 <body>
     <div class="custom-button">
-        <a href="redesign.html"><u>ZARA SHOES RE-DESIGN</u></a>
+        <a href="redesign.html"><u>SEE THE RE-DESIGN</u></a>
     </div>
     
+    <div class="credit">Designed and coded by Ruchi Ukhade</div>
+
     <div class="container">
         <h1>Responsive Redesign:</h1>
         <h1>Zara Women’s Shoes “<a href="https://www.zara.com/us/en/woman-shoes-l1251.html" target="_blank">View All</a>” Webpage</h1>
+        <h3>A redesign of a Zara webpage with considerations to user preference and responsiveness of the webpage.</h3>
+
+        <div class="spacer"></div>
         
         <div class="heading">
             <div class="icon">
@@ -139,6 +170,18 @@
         </div>
     </div>
 
+
+    <div class="container next-topic">
+        <div class="heading">
+            <div class="icon">
+                <img src="bookmark.png" alt="bookmark icon">
+            </div>
+            <h2>ACCESSIBILITY</h2>
+        </div>
+        <p><b>Evaluating the accessibility of Zara's "Women's Shoes - View All" webpage using WAVE (Web Accessibility Evaluation Tool) guidelines reveals several areas of concern:</p></b>
+            <p>Alternative Text for Images: Many product images lack descriptive alternative text, making it difficult for screen readers to convey visual content to users with visual impairments.</li>
+            <p>Form Labels: Some interactive elements, such as filters and buttons, are missing proper labels, leading to confusion for users relying on assistive technologies.</li>
+    
     <div class="container next-topic">
         <div class="heading">
             <div class="icon">
@@ -151,6 +194,14 @@
             <img src="Inspo2.png" alt="FootLocker shoes">
             <img src="Inspo3.png" alt="Gucci shoes">
         </div>
+
+    <div class="container next-topic">
+         <div class="heading">
+            <div class="icon">
+                  <img src="bookmark.png" alt="bookmark icon">
+             </div>
+              <h2>VISUAL DESIGN GUIDE</h2>
+        </div>
         <div class="usability">
             <img src="VisDesignGuide.png" alt="Visual Design Guide">
         </div>
@@ -161,7 +212,7 @@
             <div class="icon">
                 <img src="bookmark.png" alt="bookmark icon">
             </div>
-            <h2>RE-DESIGN</h2>
+            <h2>SIZE RESPONSIVE MOCK-UPS</h2>
         </div>
 
         </div>
@@ -169,13 +220,8 @@
             <img src="Desktop.png" alt="Destop version">
         </div>
 
-        </div>
-        <div class="usability">
+        <div class="ipad-design">
             <img src="iPad.png" alt="Ipad version">
-        </div>
-
-        </div>
-        <div class="usability">
             <img src="iPhone.png" alt="Iphone version">
         </div>
 
