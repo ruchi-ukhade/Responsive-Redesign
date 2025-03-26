@@ -114,14 +114,15 @@
         .ipad-design {
             display: flex;
             justify-content: center;
-            align-items: top;
+            align-items: flex-start;
             flex-wrap: wrap;
             gap: 10px;
         }
 
         .ipad-design img {
-            max-width: auto; /* Ensure images take equal width in a row */
+            max-width: 100%; /* Ensure images take equal width in a row */
             height: auto;
+            object-fit: contain;
         }
 
 
