@@ -4,55 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zara Shoes Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
     <style>
-        .credit {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: grey;
-        font-size: 20px;
-        font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: "Helvetica Neue Thin", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #fff;
+            background-color: #ffffff;
+            font-family: 'Courier Prime', monospace;
+            color: #2e2e2e;
         }
-        .container {
-            max-width: 1500px;
-            width: 90%;
+
+        header {
+            background-color: #222930;
+            width: 100%;
+            padding: 70px 0;
             text-align: center;
         }
-        h1 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .heading {
-            display: flex;
-            align-items: left;
-            gap: 20px;
-            justify-content: left;
-        }
-        h2 {
-            font-size: 1.5rem;
+
+        .title {
+            font-family: 'Courier New', monospace;
+            font-size: 90px;
+            color: white;
             margin: 0;
-        }
-        p {
-            font-size: 1.2rem;
-            text-align: left;
+            letter-spacing: 4px;
+            font-weight: normal;
         }
 
         .custom-button {
             position: absolute;
-            top: 20px; /* Adjust as needed */
-            right: 20px; /* Adjust as needed a */
+            top: 20px;
+            right: 20px;
         }
 
         .custom-button a {
@@ -72,144 +57,158 @@
             color: white;
         }
 
-        .icon img {
-            width: 30px;
-            height: 30px;
+        .credit {
+            text-align: left;
+            margin-left: 20px;
+            color: grey;
+            font-size: 16px;
         }
-        .usability {
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #222;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 3rem;
+        }
+
+        .icon img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .usability, .ipad-design, .design-inspiration {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-        }
-        .usability img {
-            width: 100%;
-            max-width: 1500px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 80px;
-        }
-        .next-topic {
-            margin-top: 200px;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 2rem;
         }
 
-            /* Flexbox for images inside "DESIGN INSPIRATION" */
-        .design-inspiration {
-            display: flex;
-            justify-content: center;
-            align-items: top;
-            flex-wrap: wrap;
-            gap: 10px;
+        .usability img, .ipad-design img, .design-inspiration img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
         }
 
         .design-inspiration img {
-            max-width: 32%; /* Ensure images take equal width in a row */
-            height: auto;
+            max-width: 32%;
         }
+
         .spacer {
-        height: 50px; /* Adjust the height as needed */
+            height: 40px;
         }
 
-        .ipad-design {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .ipad-design img {
-            max-width: 100%; /* Ensure images take equal width in a row */
-            height: auto;
-            object-fit: contain;
-        }
-
-
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
+
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
-            p {
-                font-size: 1rem;
-            }
+
             .design-inspiration img {
-            max-width: 100%;
-             }
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1 class="title">RUCHI UKHADE</h1>
+    </header>
+
     <div class="custom-button">
         <a href="redesign.html"><u>SEE THE RE-DESIGN</u></a>
     </div>
-    
-    <div class="credit">Designed and coded by Ruchi Ukhade</div>
 
-    <div class="container">
+    <main>
         <h1>Responsive Redesign:</h1>
         <h1>Zara Women’s Shoes “<a href="https://www.zara.com/us/en/woman-shoes-l1251.html" target="_blank">View All</a>” Webpage</h1>
         <h3>A redesign of a Zara webpage with considerations to user preference and responsiveness of the webpage.</h3>
 
         <div class="spacer"></div>
-        
+
         <div class="heading">
             <div class="icon">
                 <img src="bookmark.png" alt="bookmark icon">
             </div>
             <h2>USABILITY OF THE WEB PAGE</h2>
         </div>
-        
+
         <p>Zara’s Women’s Shoes page is annoying because the images are huge, making you scroll forever, and not all the shoes are visible—you have to search just to find them.</p>
 
         <div class="usability">
             <img src="Usability.png" alt="Usability of the web page">
         </div>
-    </div>
 
-
-    <div class="container next-topic">
         <div class="heading">
             <div class="icon">
                 <img src="bookmark.png" alt="bookmark icon">
             </div>
             <h2>ACCESSIBILITY</h2>
         </div>
-        <p><b>Evaluating the accessibility of Zara's "Women's Shoes - View All" webpage using WAVE (Web Accessibility Evaluation Tool) guidelines reveals several areas of concern:</p></b>
-            <p>Alternative Text for Images: Many product images lack descriptive alternative text, making it difficult for screen readers to convey visual content to users with visual impairments.</li>
-            <p>Form Labels: Some interactive elements, such as filters and buttons, are missing proper labels, leading to confusion for users relying on assistive technologies.</li>
-    
-    <div class="container next-topic">
+        <p><b>Evaluating the accessibility of Zara's "Women's Shoes - View All" webpage using WAVE (Web Accessibility Evaluation Tool) guidelines reveals several areas of concern:</b></p>
+        <p>Alternative Text for Images: Many product images lack descriptive alternative text, making it difficult for screen readers to convey visual content to users with visual impairments.</p>
+        <p>Form Labels: Some interactive elements, such as filters and buttons, are missing proper labels, leading to confusion for users relying on assistive technologies.</p>
+
         <div class="heading">
             <div class="icon">
                 <img src="bookmark.png" alt="bookmark icon">
             </div>
             <h2>DESIGN INSPIRATION</h2>
         </div>
-        <p>inspo from <a href="https://www.balenciaga.com/en-us/women/shoes" target="_blank">Balenciaga</a>, <a href="https://www.footlocker.com/?cm_mmc=Paid%20Search-_-Google-_--_-Brand-_--_--_--_-BDT-_-Evergreen-_-1588422931-_--_-61051605598-_--_--_--_--_-&gad_source=1&gclid=Cj0KCQjwqIm_BhDnARIsAKBYcmuCQG6owfDHlCrCGZ7tfXAbsw6IEhsU2bX5QOCvUcwjsvlxAhX8yU0aAiCTEALw_wcB&gclsrc=aw.ds" target="_blank">FootLocker</a>,and <a href="https://www.gucci.com/us/en/st/newsearchpage?searchString=shoes&sortBy=relev&facetFilters=categoryLevel1_en%3AWomen&search-cat=header-search&utm_source=google&utm_source_platform=SA360&utm_medium=cpc&utm_campaign=US%7CEN%7CSRC%7CBrand%7CShoes%7CAll%7CNORAM+Styles&utm_id=17318729916&gad_source=1&gclid=Cj0KCQjwqIm_BhDnARIsAKBYcmujTIr_l2SqFjUxcg9dxNNK5w8su8-8rQpdsKAWc6VoA9XgTH5UfQMaAlNpEALw_wcB&gclsrc=aw.ds" target="_blank">Gucci</a></p>
+        <p>Inspo from <a href="https://www.balenciaga.com/en-us/women/shoes" target="_blank">Balenciaga</a>, <a href="https://www.footlocker.com" target="_blank">FootLocker</a>, and <a href="https://www.gucci.com/us/en/st/newsearchpage?searchString=shoes" target="_blank">Gucci</a></p>
+
         <div class="design-inspiration">
             <img src="Inspo1.png" alt="Balenciaga shoes">
             <img src="Inspo2.png" alt="FootLocker shoes">
             <img src="Inspo3.png" alt="Gucci shoes">
         </div>
 
-    <div class="container next-topic">
-         <div class="heading">
+        <div class="heading">
             <div class="icon">
-                  <img src="bookmark.png" alt="bookmark icon">
-             </div>
-              <h2>VISUAL DESIGN GUIDE</h2>
+                <img src="bookmark.png" alt="bookmark icon">
+            </div>
+            <h2>VISUAL DESIGN GUIDE</h2>
         </div>
         <div class="usability">
             <img src="VisDesignGuide.png" alt="Visual Design Guide">
         </div>
-    </div>
-    
-    <div class="container next-topic">
+
         <div class="heading">
             <div class="icon">
                 <img src="bookmark.png" alt="bookmark icon">
@@ -217,16 +216,14 @@
             <h2>SIZE RESPONSIVE MOCK-UPS</h2>
         </div>
 
-        </div>
         <div class="usability">
-            <img src="Desktop.png" alt="Destop version">
+            <img src="Desktop.png" alt="Desktop version">
         </div>
 
         <div class="ipad-design">
-            <img src="iPad.png" alt="Ipad version">
-            <img src="iPhone.png" alt="Iphone version">
+            <img src="iPad.png" alt="iPad version">
+            <img src="iPhone.png" alt="iPhone version">
         </div>
-
-    </div>
+    </main>
 </body>
 </html>
